@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+/*方法一*/
+.container1 {
+	padding: 20px 160px 20px 240px;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin-bottom: 30px;
+}
+.container1 .center {
+	float: left;
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #999;				
+}
+.container1 .left {
+	position: relative;
+	float: left;
+	padding: 20px;
+	width: 160px;
+	margin-left: -100%;
+	background-color: #fff;
+	border: 1px solid #999;
+	right: 220px;
+}
+.container1 .right {
+	float: right;
+	width: 80px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+	margin-right: -140px;
+}
+.container1 .left .img {
+	float: left;
+	margin-right: 16px;
+}
+.container1 .right ul>li {
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+/*方法二*/
+.container2 {
+	padding: 20px 160px 20px 240px;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin-bottom: 30px;
+	position:relative;
+}
+.container2 .center {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #999;				
+}
+.container2 .left {
+	position: absolute;
+	padding: 20px;
+	width: 160px;
+	top: 20px;
+	left: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.container2 .right {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 80px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.container2 .left .img {
+	float: left;
+	margin-right: 16px;
+}
+.container2 .right ul>li {
+	list-style: none;
+	margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

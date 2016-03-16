@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+	<head>
+		<title>task1-3三栏式布局</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="./task1-3.css">
+	</head>
+	<body>
+		<div class="container1">
+			<div class="center">
+				<pre>
+方法一：float + relative:
+		.container1 {
+			padding: 20px 160px 20px 240px;
+			background-color: #eee;
+			border: 1px solid #999;
+			margin-bottom: 30px;
+		}
+		.container1 .center {
+			float: left;
+			width: 100%;
+			background-color: #fff;
+			border: 1px solid #999;				
+		}
+		.container1 .left {
+			position: relative;
+			float: left;
+			padding: 20px;
+			width: 160px;
+			margin-left: -100%;
+			background-color: #fff;
+			border: 1px solid #999;
+			right: 220px;
+		}
+		.container1 .right {
+			float: right;
+			width: 80px;
+			padding: 20px;
+			background-color: #fff;
+			border: 1px solid #999;
+			margin-right: -140px;
+		}
+				</pre>			
+			</div>		
+			<div class="left">
+				<div class="img"><img src="./img1-3.jpg" alt="团队图片" width="80" height="80"></div>
+				<div class="teamname">五湖四海</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="right">
+				<ul>
+					<li><img src="./img1-1.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-2.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-3.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-4.jpg" alt="" width="80" height="80"></li>
+				</ul>
+			</div>
+			<div style="clear:both;"></div>			
+		</div><!-- container1 -->
+		
+		<div class="container2">
+			<div class="center">
+				方法二：想用绝对定位定位两边栏，但是父元素没办法把两边栏包含进去，求解答？	
+				<pre>
+.container2 {
+	padding: 20px 160px 20px 240px;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin-bottom: 30px;
+	position:relative;
+}
+.container2 .center {
+	width: 100%;
+	background-color: #fff;
+	border: 1px solid #999;				
+}
+.container2 .left {
+	position: absolute;
+	padding: 20px;
+	width: 160px;
+	top: 20px;
+	left: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}
+.container2 .right {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	width: 80px;
+	padding: 20px;
+	background-color: #fff;
+	border: 1px solid #999;
+}					
+				</pre>			
+			</div>		
+			<div class="left">
+				<div class="img"><img src="./img1-3.jpg" alt="团队图片" width="80" height="80"></div>
+				<div class="teamname">五湖四海</div>
+				<div style="clear:both;"></div>
+			</div>
+			<div class="right">
+				<ul>
+					<li><img src="./img1-1.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-2.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-3.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-4.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-1.jpg" alt="" width="80" height="80"></li>
+					<li><img src="./img1-2.jpg" alt="" width="80" height="80"></li>
+				</ul>
+			</div>
+			<div style="clear:both;"></div>			
+			
+		</div><!-- container2 -->
+	
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

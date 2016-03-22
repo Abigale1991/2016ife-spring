@@ -1,0 +1,57 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 1280;
+}
+.newWorld {
+	background-color: #fff;
+}
+.newWorld .navigationBar {
+	height: 57px;
+	line-height: 57px;
+	padding-left: 55px;
+	padding-right: 65px;
+}
+.newWorld .navigationBar .inline {
+	display: inline-block;
+}
+.newWorld .navigationBar .left {
+	float: left;
+}
+.newWorld .navigationBar .left .img {
+	padding-top: 15px;
+}
+.newWorld .navigationBar .left .new {
+	font-size: 21px;
+	color: #393a3a;
+}
+.newWorld .navigationBar .right {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

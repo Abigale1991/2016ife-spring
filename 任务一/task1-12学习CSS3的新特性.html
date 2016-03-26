@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<html lang="zh">
+	<head>
+		<meta charset="utf-8">
+		<title>学习CSS3的新特性</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			body {
+				padding: 30px;
+			}
+			/*第一部分---表格*/
+			table>thead {
+				background-color: #000;
+				color: #fff;
+			}
+			table>tbody>tr:nth-child(1),table>tbody>tr:nth-child(2),table>tbody>tr:nth-child(3) {
+				color: #f00;
+			}
+			table>tbody>tr:nth-child(even) {
+				background-color: #ccc;
+			}
+			/*第二部分---输入框*/
+			.inputBox {
+				margin-top: 30px;
+				height: 50px;
+				width: 350px;
+				text-align: center;
+			}
+			.inputBox .input {
+				width: 150px;
+				transition: width 3s;
+				-o-transition: width 3s;
+				-webkit-transition: width 3s;
+				-moz-transition: width 3s;
+			}
+			.inputBox .input:focus {
+				width: 250px;
+			}
+			/*第三部分通告栏切换*/
+			.banner {
+				width: 250px;
+				height: 200px;
+				border: 0;
+				position: relative;
+			}		
+			.banner li {
+				list-style: none;
+			}
+			.banner .slide {
+				width: 300%;
+				height: 100%;				
+			}
+			.banner .slide li {
+				position: absolute;
+				width: 250px;
+				height: 100%;
+			}
+			.banner .slide li:nth-child(1) {
+				background-color: #3ff;
+			}
+			.banner .slide li:nth-child(2) {
+				background-color: #063;
+			}	
+			.banner .slide li:nth-child(3) {
+				background-color: #036;
+			}
+			@keyframes leftToRight {
+				0% {
+					left: -100%;
+				}
+				100% {
+					left: 0%;
+				}
+			}
+			.banner .slide li:target {
+				z-index: 2;  /*很重要，切换目标要压住原有背景*/
+				-o-animation: leftToRight 2s linear;
+				-moz-animation: leftToRight 2s linear;
+				-webkit-animation: leftToRight 2s linear;
+				animation: leftToRight 2s linear;								
+			}
+			.banner .banner-button {
+				position: absolute;
+				right: 0px;
+				bottom: 0px;
+				overflow: hidden;
+				z-index: 10; /*切换按钮永远在最上层*/
+			}
+			.banner .banner-button a {
+				text-decoration:none;
+				display: inline-block;
+				width: 25px;
+				height: 25px;
+				line-height: 25px;
+				text-align: center;
+				margin-left: 2px;
+				background-color: #ddd;
+				opacity: 0.5;
+				filter: alpha(opacity=50);
+				color: #000;
+			}					
+		</style>
+	</head>
+	<body>
+		<table width="300px">
+			<colgroup>
+				<col width="15%">
+				<col width="65%">
+				<col width="20%">
+			</colgroup>
+			<thead>
+				<tr>
+					<td>排名</td>
+					<td>网站</td>
+					<td>热度</td>										
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1.</td>
+					<td>百度前端技术学院</td>
+					<td>13000</td>
+				</tr>
+				<tr>
+					<td>2.</td>
+					<td>百度前端技术学院</td>
+					<td>12000</td>
+				</tr>
+				<tr>
+					<td>3.</td>
+					<td>百度前端技术学院</td>
+					<td>11000</td>
+				</tr>
+				<tr>
+					<td>4.</td>
+					<td>百度前端技术学院</td>
+					<td>1000</td>
+				</tr>
+				<tr>
+					<td>5.</td>
+					<td>百度前端技术学院</td>
+					<td>9000</td>
+				</tr>
+				<tr>
+					<td>6.</td>
+					<td>百度前端技术学院</td>
+					<td>8000</td>
+				</tr>
+				<tr>
+					<td>7.</td>
+					<td>百度前端技术学院</td>
+					<td>7000</td>
+				</tr>
+				<tr>
+					<td>8.</td>
+					<td>百度前端技术学院</td>
+					<td>6000</td>
+				</tr>
+				<tr>
+					<td>9.</td>
+					<td>百度前端技术学院</td>
+					<td>5000</td>
+				</tr>															
+				<tr>
+					<td>10.</td>
+					<td>百度前端技术学院</td>
+					<td>4000</td>
+				</tr>				
+			</tbody>
+		</table>
+		
+		<div class="inputBox">
+			<input type="text" class="input">
+		</div>
+
+		<div class="banner">
+			<ul class="slide">
+				<li id="li1"></li>
+				<li id="li2"></li>
+				<li id="li3"></li>
+			</ul>
+			<div class="banner-button">
+				<a href="#li1">1</a>
+				<a href="#li2">2</a>
+				<a href="#li3">3</a>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
